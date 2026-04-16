@@ -1,7 +1,28 @@
-# Ticket_Assistant
 #  AI-Powered Support Ticket Assistant
 
 A full-stack web application where users can submit support tickets and AI automatically categorizes them and suggests professional replies.
+
+---
+## 🔐 Admin Access
+
+This application includes a simple admin layer for managing support tickets.
+
+### 👤 Admin Credentials
+
+```bash
+Email: admin@gmail.com
+Password: admin123
+```
+
+### 🧑‍💼 Admin Capabilities
+
+Once logged in as admin, you can:
+
+* View all submitted tickets (Dashboard)
+* Open and inspect ticket details
+* Edit / write custom responses to users
+* Mark tickets as **RESOLVED** or reopen them
+* Delete tickets
 
 ---
 
@@ -18,7 +39,6 @@ A full-stack web application where users can submit support tickets and AI autom
 
 * Automatically categorizes tickets
 * Generates professional suggested replies
-* Provides confidence score
 * Fallback logic if AI fails
 
 ### 📊 Dashboard
@@ -225,3 +245,9 @@ Backend: Render
 **Muzammil Raza Khan**
 
 ---
+
+### ⚠️ Note
+
+* This is a **demo authentication system** using localStorage
+* Do not use these credentials in production
+* For real-world apps, implement secure authentication (JWT, OAuth, etc.)
