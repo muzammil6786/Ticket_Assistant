@@ -22,7 +22,7 @@ export default function Create({ refresh }) {
 
   setLoading(true);
 
-  const res = await fetch("http://localhost:5000/api/tickets", {
+  const res = await fetch("https://ticket-assistant-4liq.onrender.com/api/tickets", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

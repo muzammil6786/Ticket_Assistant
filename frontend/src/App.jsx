@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Create from "./pages/Create";
 import Dashboard from "./pages/Dashboard";
 import Detail from "./pages/Detail";
+import Login from "./pages/Login";
 
 export default function App() {
   return (
@@ -11,9 +12,10 @@ export default function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/new" element={<Create />} />
+          <Route path="/" element={<Create />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/ticket/:id" element={<Detail />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </BrowserRouter>

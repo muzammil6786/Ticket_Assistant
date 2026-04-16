@@ -56,10 +56,15 @@ exports.updateStatus = async (req, res) => {
 };
 
 exports.updateReply = async (req, res) => {
-  await Ticket.findByIdAndUpdate(req.params.id, {
-    aiReply: req.body.reply
-  });
-  res.json({ success: true });
+  const { reply } = req.body;
+
+  const ticket = await Ticket.findByIdAndUpdate(
+    req.params.id,
+    { aiReply: reply },
+    { new: true }
+  );
+
+  res.json({ success: true, ticket });
 };
 
 exports.deleteTicket = async (req, res) => {
