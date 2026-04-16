@@ -1,4 +1,4 @@
-const OpenAI = require("openai/index.mjs");
+const OpenAI = require("openai");
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 exports.processTicket = async (description) => {
@@ -34,7 +34,7 @@ Ticket:
     const response = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }],
-      temperature: 0.7, // 🔥 adds creativity
+      temperature: 0.7, 
     });
 
     let text = response.choices[0].message.content;
